@@ -1,0 +1,24 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 40,
+      "category": "other",
+      "reason": "The `Game game;` declaration inside the `play` function creates an uninitialized storage pointer.  Assigning values to `game.player` and `game.number` modifies a random storage location, potentially overwriting critical data within the contract's state, like owner address, bet price or `gamesPlayed` array data. This leads to unpredictable behavior and can be exploited to manipulate the contract's logic or even make the contract unusable."
+    },
+    {
+      "line": 32,
+      "category": "bad_randomness",
+      "reason": "The contract uses `sha3(now, block.blockhash(block.number-1))` to generate a pseudo-random number. `now` (timestamp) and blockhash are both predictable/influenceable by miners, thus making the generated `secretNumber` predictable. This can allow players to predict the `secretNumber` and always win."
+    },
+    {
+      "line": 37,
+      "category": "access_control",
+      "reason": "The `require` statement enforces that `number <= 10`, but the secretNumber can be between 1 and 20, so it's impossible to ever guess the right number."
+    }
+  ],
+  "validation": {
+    "total_lines": 61,
+    "invalid_vulnerabilities": []
+  }
+}

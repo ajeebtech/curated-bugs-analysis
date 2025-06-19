@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 41,
+      "category": "reentrancy",
+      "reason": "The CashOut function sends Ether to the caller using a low-level call without following the checks-effects-interactions pattern. This allows for a reentrancy attack, where the recipient can call back into the contract and potentially drain funds."
+    }
+  ],
+  "validation": {
+    "total_lines": 77,
+    "invalid_vulnerabilities": []
+  }
+}

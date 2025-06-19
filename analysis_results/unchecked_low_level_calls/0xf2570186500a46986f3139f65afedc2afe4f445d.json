@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 14,
+      "category": "unchecked_low_level_calls",
+      "reason": "The `call` function does not check the return value. If the call to `fuck` fails, the transaction will not revert, potentially leading to unexpected behavior and loss of funds, especially if `giveBlockReward()` has critical side effects."
+    }
+  ],
+  "validation": {
+    "total_lines": 21,
+    "invalid_vulnerabilities": []
+  }
+}

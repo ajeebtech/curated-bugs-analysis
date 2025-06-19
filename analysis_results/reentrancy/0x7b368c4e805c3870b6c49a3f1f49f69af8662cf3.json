@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 29,
+      "category": "reentrancy",
+      "reason": "The `Collect` function allows reentrancy because it calls an external contract (`msg.sender`) and then updates the balance. A malicious contract could call back into `Collect` before the balance is updated, allowing them to withdraw more funds than they should be able to."
+    }
+  ],
+  "validation": {
+    "total_lines": 85,
+    "invalid_vulnerabilities": []
+  }
+}

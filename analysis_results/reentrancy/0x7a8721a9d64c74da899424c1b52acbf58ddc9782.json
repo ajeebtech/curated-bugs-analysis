@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 52,
+      "category": "reentrancy",
+      "reason": "The CashOut function uses .call.value to send Ether, which is vulnerable to reentrancy attacks. An attacker can call the CashOut function recursively from the fallback function, potentially draining the contract's funds."
+    }
+  ],
+  "validation": {
+    "total_lines": 88,
+    "invalid_vulnerabilities": []
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 24,
+      "category": "reentrancy",
+      "reason": "The `withdraw` function uses `msg.sender.call.value(_amount)()` to send funds. This is vulnerable to reentrancy attacks because the recipient can call back into the `withdraw` function before the sender's balance is updated."
+    }
+  ],
+  "validation": {
+    "total_lines": 32,
+    "invalid_vulnerabilities": []
+  }
+}

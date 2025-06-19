@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 63,
+      "category": "reentrancy",
+      "reason": "The `Collect` function uses `msg.sender.call.value(_am)()`, which is vulnerable to reentrancy. An attacker can call this function and re-enter the contract before the balance is updated, allowing them to withdraw more than they should."
+    }
+  ],
+  "validation": {
+    "total_lines": 104,
+    "invalid_vulnerabilities": []
+  }
+}

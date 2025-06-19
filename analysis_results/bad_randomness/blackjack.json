@@ -1,0 +1,24 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 17,
+      "category": "bad_randomness",
+      "reason": "The random number generation uses block.number and block.timestamp, which are predictable by miners. This allows for manipulation of the card dealing process."
+    },
+    {
+      "line": 19,
+      "category": "bad_randomness",
+      "reason": "The random number generation uses block.number and block.timestamp, which are predictable by miners. This allows for manipulation of the card dealing process."
+    },
+    {
+      "line": 21,
+      "category": "bad_randomness",
+      "reason": "The random number generation uses block.number and block.timestamp, which are predictable by miners. This allows for manipulation of the card dealing process."
+    }
+  ],
+  "validation": {
+    "total_lines": 308,
+    "invalid_vulnerabilities": []
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 54,
+      "category": "reentrancy",
+      "reason": "The Collect function uses a `call.value()` to send funds, which is vulnerable to reentrancy. An attacker can call the `Collect` function recursively to drain the contract's balance."
+    }
+  ],
+  "validation": {
+    "total_lines": 96,
+    "invalid_vulnerabilities": []
+  }
+}

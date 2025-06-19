@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 63,
+      "category": "reentrancy",
+      "reason": "The contract uses `call.value()` to send Ether, which is vulnerable to reentrancy attacks. An attacker can call the `Collect` function, and in the fallback function of the attacker's contract, recursively call `Collect` again to drain the contract."
+    }
+  ],
+  "validation": {
+    "total_lines": 104,
+    "invalid_vulnerabilities": []
+  }
+}

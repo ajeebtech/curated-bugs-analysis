@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 15,
+      "category": "reentrancy",
+      "reason": "The `airDrop` function uses the `supportsToken` modifier, which makes an external call to `Bank(msg.sender).supportsToken()`. An attacker-controlled contract can be deployed at the `msg.sender` address. The attacker's `supportsToken` function can then call back into the `airDrop` function before the initial `airDrop` call finishes, leading to a reentrancy vulnerability. Specifically, the `attack` contract's `supportsToken` function calls `ModifierEntrancy(msg.sender).airDrop()` before returning, causing the `tokenBalance[msg.sender] += 20;` line to be executed multiple times."
+    }
+  ],
+  "validation": {
+    "total_lines": 49,
+    "invalid_vulnerabilities": []
+  }
+}

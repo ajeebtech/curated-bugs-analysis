@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 54,
+      "category": "unchecked_low_level_calls",
+      "reason": "The `send` function can fail if the recipient address is a contract that rejects the transfer. The return value of `send` is not checked, so a failed transfer will not be detected, and the contract will continue as if the transfer was successful, leading to loss of funds."
+    },
+    {
+      "line": 65,
+      "category": "unchecked_low_level_calls",
+      "reason": "The `send` function can fail if the recipient address is a contract that rejects the transfer. The return value of `send` is not checked, so a failed transfer will not be detected, and the contract will continue as if the transfer was successful, leading to loss of funds."
+    }
+  ],
+  "validation": {
+    "total_lines": 90,
+    "invalid_vulnerabilities": []
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 30,
+      "category": "unchecked_low_level_calls",
+      "reason": "The contract uses a low-level call without checking the return value. If the call fails, the transaction will not revert, potentially leading to unexpected behavior and loss of funds."
+    }
+  ],
+  "validation": {
+    "total_lines": 132,
+    "invalid_vulnerabilities": []
+  }
+}

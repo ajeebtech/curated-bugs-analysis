@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 94,
+      "category": "reentrancy",
+      "reason": "The `WithdrawToHolder` function sends ether to an arbitrary address using `call.value()`. If the recipient is a contract, it can call back into the `TokenBank` contract before `Holders[_addr]` is updated, potentially leading to multiple withdrawals."
+    }
+  ],
+  "validation": {
+    "total_lines": 100,
+    "invalid_vulnerabilities": []
+  }
+}

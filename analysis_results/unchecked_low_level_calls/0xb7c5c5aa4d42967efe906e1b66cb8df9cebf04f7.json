@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 25,
+      "category": "unchecked_low_level_calls",
+      "reason": "The `call` function's return value is not checked. If the call fails, the user's balance will be set to 0, but they will not receive their Ether back, resulting in a loss of funds. This is because the call could fail due to the recipient being a contract that reverts during the transfer."
+    }
+  ],
+  "validation": {
+    "total_lines": 28,
+    "invalid_vulnerabilities": []
+  }
+}

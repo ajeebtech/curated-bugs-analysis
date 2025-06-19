@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 29,
+      "category": "reentrancy",
+      "reason": "The `Collect` function uses `msg.sender.call.value(_am)()` to send Ether. This allows the recipient to execute arbitrary code, potentially calling back into the `Collect` function before the balance is updated, leading to a reentrancy vulnerability."
+    }
+  ],
+  "validation": {
+    "total_lines": 85,
+    "invalid_vulnerabilities": []
+  }
+}

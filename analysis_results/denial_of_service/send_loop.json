@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 24,
+      "category": "denial_of_service",
+      "reason": "The `refundAll` function iterates through `refundAddresses` and sends refunds. If a `send` call fails (e.g., due to the recipient being a contract that reverts on receiving funds or due to insufficient gas), the entire transaction reverts, preventing any further refunds from being processed. This effectively denies service to other participants who are entitled to a refund."
+    }
+  ],
+  "validation": {
+    "total_lines": 28,
+    "invalid_vulnerabilities": []
+  }
+}

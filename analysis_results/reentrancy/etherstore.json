@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 27,
+      "category": "reentrancy",
+      "reason": "The contract uses `call.value` to send Ether, which is vulnerable to reentrancy attacks. An attacker can call the `withdrawFunds` function, and in the fallback function of the attacker's contract, `withdrawFunds` can be called again before the state variables `balances[msg.sender]` and `lastWithdrawTime[msg.sender]` are updated."
+    }
+  ],
+  "validation": {
+    "total_lines": 31,
+    "invalid_vulnerabilities": []
+  }
+}

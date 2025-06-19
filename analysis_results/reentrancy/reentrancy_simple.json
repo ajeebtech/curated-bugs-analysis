@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 24,
+      "category": "reentrancy",
+      "reason": "The contract allows a user to withdraw their balance using a call.value which can lead to a reentrancy attack if the recipient is a contract that calls back into the withdrawBalance function before the userBalance is set to 0. This allows the attacker to withdraw the balance multiple times."
+    }
+  ],
+  "validation": {
+    "total_lines": 29,
+    "invalid_vulnerabilities": []
+  }
+}

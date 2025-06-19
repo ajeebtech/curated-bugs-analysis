@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 21,
+      "category": "reentrancy",
+      "reason": "The contract allows reentrancy because it calls an external contract (`recipient.call.value(amountToWithdraw)(\"\")`) before updating the `claimedBonus` state variable in `getFirstWithdrawalBonus`. An attacker can exploit this by creating a fallback function in their contract that calls `getFirstWithdrawalBonus` again, allowing them to claim the bonus multiple times."
+    }
+  ],
+  "validation": {
+    "total_lines": 31,
+    "invalid_vulnerabilities": []
+  }
+}

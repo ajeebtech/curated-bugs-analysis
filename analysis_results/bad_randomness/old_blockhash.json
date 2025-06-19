@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 35,
+      "category": "bad_randomness",
+      "reason": "The `blockhash` of a future block is predictable. Also, `blockhash` returns zero for blocks older than 256 blocks. This allows an attacker to always win the lottery."
+    }
+  ],
+  "validation": {
+    "total_lines": 42,
+    "invalid_vulnerabilities": []
+  }
+}

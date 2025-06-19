@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 38,
+      "category": "bad_randomness",
+      "reason": "The outcome of the lottery (won or lost) is determined by whether the current block number is even. This is easily predictable, allowing users to always win."
+    },
+    {
+      "line": 42,
+      "category": "bad_randomness",
+      "reason": "The block number is easily manipulatable."
+    }
+  ],
+  "validation": {
+    "total_lines": 68,
+    "invalid_vulnerabilities": []
+  }
+}

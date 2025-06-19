@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 18,
+      "category": "short_addresses",
+      "reason": "The contract is vulnerable to the short address attack. The `sendCoin` function does not check the length of the `to` address. If a short address is provided, the EVM will pad the address with zeros, potentially leading to unintended transfers. For example, if someone sends tokens to 0x123 (a short address), the EVM will pad it to 0x123000000000000000000000000000000000000. If there is a user at this address, they will receive the tokens instead."
+    }
+  ],
+  "validation": {
+    "total_lines": 29,
+    "invalid_vulnerabilities": []
+  }
+}

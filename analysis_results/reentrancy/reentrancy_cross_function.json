@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 24,
+      "category": "reentrancy",
+      "reason": "The `withdrawBalance` function uses `msg.sender.call.value(amountToWithdraw)(\"\")` to send Ether, which is vulnerable to reentrancy attacks. A malicious contract can call `withdrawBalance` and then, within the same transaction, call `transfer` to drain the user's balance before it is set to zero at the end of the function."
+    }
+  ],
+  "validation": {
+    "total_lines": 28,
+    "invalid_vulnerabilities": []
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 18,
+      "category": "reentrancy",
+      "reason": "The `msg.sender.call.value(oCredit)()` allows the recipient to call back into the contract before the credit is set to 0, leading to a reentrancy vulnerability."
+    }
+  ],
+  "validation": {
+    "total_lines": 28,
+    "invalid_vulnerabilities": []
+  }
+}

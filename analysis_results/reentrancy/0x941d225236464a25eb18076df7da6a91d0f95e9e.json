@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 44,
+      "category": "reentrancy",
+      "reason": "The `CashOut` function uses `msg.sender.call.value(_am)()`, which is vulnerable to reentrancy. An attacker can call back into the contract before the `balances[msg.sender]-=_am;` line is executed, potentially draining the contract of funds."
+    }
+  ],
+  "validation": {
+    "total_lines": 80,
+    "invalid_vulnerabilities": []
+  }
+}

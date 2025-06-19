@@ -1,0 +1,39 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 49,
+      "category": "bad_randomness",
+      "reason": "block.number can be manipulated by miners and is predictable"
+    },
+    {
+      "line": 99,
+      "category": "bad_randomness",
+      "reason": "block.coinbase can be manipulated by miners and is predictable"
+    },
+    {
+      "line": 101,
+      "category": "bad_randomness",
+      "reason": "msg.sender can be manipulated by users and is predictable"
+    },
+    {
+      "line": 103,
+      "category": "bad_randomness",
+      "reason": "block.difficulty can be manipulated by miners and is predictable"
+    },
+    {
+      "line": 114,
+      "category": "bad_randomness",
+      "reason": "block.number can be manipulated by miners and is predictable"
+    },
+    {
+      "line": 158,
+      "category": "bad_randomness",
+      "reason": "block.number can be manipulated by miners and is predictable"
+    }
+  ],
+  "validation": {
+    "total_lines": 174,
+    "invalid_vulnerabilities": []
+  }
+}

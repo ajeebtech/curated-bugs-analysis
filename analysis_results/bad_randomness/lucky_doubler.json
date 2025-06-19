@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 127,
+      "category": "bad_randomness",
+      "reason": "The `rand` function uses `block.blockhash(lastBlockNumber)` where `lastBlockNumber` is `block.number - 1`. This is predictable and can be manipulated by miners, leading to unfair or exploitable outcomes."
+    }
+  ],
+  "validation": {
+    "total_lines": 191,
+    "invalid_vulnerabilities": []
+  }
+}

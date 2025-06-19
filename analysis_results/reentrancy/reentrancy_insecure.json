@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 17,
+      "category": "reentrancy",
+      "reason": "The contract allows a user to withdraw their balance using `msg.sender.call.value(amountToWithdraw)(\"\")`. This can lead to a reentrancy attack because the user can call the `withdrawBalance()` function again from within the fallback function they control, before the `userBalances[msg.sender] = 0;` line is executed. This allows the user to withdraw their balance multiple times, draining the contract."
+    }
+  ],
+  "validation": {
+    "total_lines": 21,
+    "invalid_vulnerabilities": []
+  }
+}

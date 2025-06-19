@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 44,
+      "category": "unchecked_low_level_calls",
+      "reason": "The contract makes an unchecked low-level call to an arbitrary address with arbitrary data, which can lead to arbitrary code execution.  The contract calls address `adr` with `data` without checking the return value. This allows the contract to call any external contract, even if the call fails, potentially leading to unexpected and dangerous states."
+    }
+  ],
+  "validation": {
+    "total_lines": 46,
+    "invalid_vulnerabilities": []
+  }
+}

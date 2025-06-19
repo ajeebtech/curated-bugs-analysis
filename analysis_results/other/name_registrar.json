@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 21,
+      "category": "other",
+      "reason": "The `NameRecord newRecord;` declaration initializes a local variable of type `NameRecord`, not a storage variable. Consequently, the subsequent assignments to `newRecord.name` and `newRecord.mappedAddress` modify this local variable, and these changes are not persisted to storage.  `resolve[_name]` and `registeredNameRecord[msg.sender]` will map to zero values."
+    }
+  ],
+  "validation": {
+    "total_lines": 32,
+    "invalid_vulnerabilities": []
+  }
+}

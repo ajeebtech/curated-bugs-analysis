@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 31,
+      "category": "unchecked_low_level_calls",
+      "reason": "The `contract_address.call` does not check the return value of the call. If the call fails, the transaction will not revert, potentially leading to incorrect state updates."
+    }
+  ],
+  "validation": {
+    "total_lines": 35,
+    "invalid_vulnerabilities": []
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 44,
+      "category": "unchecked_low_level_calls",
+      "reason": "The contract calls an arbitrary address with arbitrary data and value without checking the return value of the `call` function. This can lead to unexpected behavior or loss of funds if the called address is a contract that reverts or performs malicious actions."
+    }
+  ],
+  "validation": {
+    "total_lines": 46,
+    "invalid_vulnerabilities": []
+  }
+}

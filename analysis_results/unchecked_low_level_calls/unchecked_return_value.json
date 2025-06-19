@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 12,
+      "category": "unchecked_low_level_calls",
+      "reason": "The return value of the low-level call is not checked. If the call fails, the transaction will still proceed, potentially leading to unexpected behavior or loss of funds."
+    }
+  ],
+  "validation": {
+    "total_lines": 19,
+    "invalid_vulnerabilities": []
+  }
+}

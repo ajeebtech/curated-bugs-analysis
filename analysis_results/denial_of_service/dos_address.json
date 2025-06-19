@@ -1,0 +1,24 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 16,
+      "category": "denial_of_service",
+      "reason": "The `emptyCreditors` function can cause a denial of service. If the `creditorAddresses` array grows too large (greater than 1500), attempting to reinitialize it with `creditorAddresses = new address[](0);` could exceed the block gas limit. This would effectively lock the contract, preventing anyone from calling `emptyCreditors` and setting `win` to `true`."
+    },
+    {
+      "line": 17,
+      "category": "denial_of_service",
+      "reason": "The `emptyCreditors` function can cause a denial of service. If the `creditorAddresses` array grows too large (greater than 1500), attempting to reinitialize it with `creditorAddresses = new address[](0);` could exceed the block gas limit. This would effectively lock the contract, preventing anyone from calling `emptyCreditors` and setting `win` to `true`."
+    },
+    {
+      "line": 18,
+      "category": "denial_of_service",
+      "reason": "The `emptyCreditors` function can cause a denial of service. If the `creditorAddresses` array grows too large (greater than 1500), attempting to reinitialize it with `creditorAddresses = new address[](0);` could exceed the block gas limit. This would effectively lock the contract, preventing anyone from calling `emptyCreditors` and setting `win` to `true`."
+    }
+  ],
+  "validation": {
+    "total_lines": 36,
+    "invalid_vulnerabilities": []
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 15,
+      "category": "bad_randomness",
+      "reason": "The random number generation uses blockhash and now, which are predictable/influenceable by miners."
+    }
+  ],
+  "validation": {
+    "total_lines": 29,
+    "invalid_vulnerabilities": []
+  }
+}

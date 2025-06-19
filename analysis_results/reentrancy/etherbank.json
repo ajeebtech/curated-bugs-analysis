@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 21,
+      "category": "reentrancy",
+      "reason": "The contract uses `call.value()` to send ether, which allows for reentrancy. An attacker can call `withdrawBalance` and, in the same transaction, call `addToBalance` before `userBalances[msg.sender]` is set to 0, potentially withdrawing more than they should be able to."
+    }
+  ],
+  "validation": {
+    "total_lines": 24,
+    "invalid_vulnerabilities": []
+  }
+}

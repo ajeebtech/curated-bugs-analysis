@@ -1,0 +1,69 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 523,
+      "category": "arithmetic",
+      "reason": "Integer overflow/underflow:  senderBalance = investing / 10**15; can overflow because investing (uint256) can be larger than 10**15 which results in a smaller number assigned to senderBalance (uint256). Then totalSupply += senderBalance + ownerBalance + animatorBalance can potentially lose funds due to that."
+    },
+    {
+      "line": 560,
+      "category": "access_control",
+      "reason": "Any user can set `investStart` to 0 by sending an amount that exceeds `investBalanceMax - investBalance`, closing the investment round and potentially preventing others from investing."
+    },
+    {
+      "line": 700,
+      "category": "bad_randomness",
+      "reason": "block.blockhash(player.blockNum) is used to generate a prize for lottery if block.number < player.blockNum+256 which is vulnerable to blockhash prediction, which is known to be insecure."
+    },
+    {
+      "line": 702,
+      "category": "bad_randomness",
+      "reason": "block.blockhash(player.blockNum) is used to generate a prize for lottery if block.number < player.blockNum+256 which is vulnerable to blockhash prediction, which is known to be insecure."
+    },
+    {
+      "line": 704,
+      "category": "bad_randomness",
+      "reason": "block.blockhash(player.blockNum) is used to generate a prize for lottery if block.number < player.blockNum+256 which is vulnerable to blockhash prediction, which is known to be insecure."
+    },
+    {
+      "line": 706,
+      "category": "bad_randomness",
+      "reason": "block.blockhash(player.blockNum) is used to generate a prize for lottery if block.number < player.blockNum+256 which is vulnerable to blockhash prediction, which is known to be insecure."
+    },
+    {
+      "line": 708,
+      "category": "bad_randomness",
+      "reason": "block.blockhash(player.blockNum) is used to generate a prize for lottery if block.number < player.blockNum+256 which is vulnerable to blockhash prediction, which is known to be insecure."
+    },
+    {
+      "line": 710,
+      "category": "bad_randomness",
+      "reason": "block.blockhash(player.blockNum) is used to generate a prize for lottery if block.number < player.blockNum+256 which is vulnerable to blockhash prediction, which is known to be insecure."
+    },
+    {
+      "line": 712,
+      "category": "bad_randomness",
+      "reason": "block.blockhash(player.blockNum) is used to generate a prize for lottery if block.number < player.blockNum+256 which is vulnerable to blockhash prediction, which is known to be insecure."
+    },
+    {
+      "line": 714,
+      "category": "bad_randomness",
+      "reason": "block.blockhash(player.blockNum) is used to generate a prize for lottery if block.number < player.blockNum+256 which is vulnerable to blockhash prediction, which is known to be insecure."
+    },
+    {
+      "line": 716,
+      "category": "bad_randomness",
+      "reason": "block.blockhash(player.blockNum) is used to generate a prize for lottery if block.number < player.blockNum+256 which is vulnerable to blockhash prediction, which is known to be insecure."
+    },
+    {
+      "line": 718,
+      "category": "bad_randomness",
+      "reason": "block.blockhash(player.blockNum) is used to generate a prize for lottery if block.number < player.blockNum+256 which is vulnerable to blockhash prediction, which is known to be insecure."
+    }
+  ],
+  "validation": {
+    "total_lines": 771,
+    "invalid_vulnerabilities": []
+  }
+}

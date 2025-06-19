@@ -1,0 +1,29 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 12,
+      "category": "bad_randomness",
+      "reason": "Using block.timestamp as a source of randomness is insecure because it can be influenced by miners."
+    },
+    {
+      "line": 18,
+      "category": "bad_randomness",
+      "reason": "Using block.number as a source of randomness is insecure because it can be influenced by miners. Additionally, division by `salt % 5` can lead to division by zero."
+    },
+    {
+      "line": 20,
+      "category": "bad_randomness",
+      "reason": "Using block.number as a source of randomness is insecure because it can be influenced by miners. The salt is also predictable, which can be guessed."
+    },
+    {
+      "line": 22,
+      "category": "bad_randomness",
+      "reason": "Using blockhash as a source of randomness is insecure because it can be influenced by miners and only available for recent blocks."
+    }
+  ],
+  "validation": {
+    "total_lines": 26,
+    "invalid_vulnerabilities": []
+  }
+}

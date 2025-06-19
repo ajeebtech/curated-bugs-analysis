@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 29,
+      "category": "reentrancy",
+      "reason": "The `Collect` function allows a reentrancy attack because it calls `msg.sender.call.value(_am)()` without updating the state (specifically `acc.balance`) *before* the call. An attacker can create a fallback function in their contract that calls back into the `Collect` function, allowing them to drain the contract's balance."
+    }
+  ],
+  "validation": {
+    "total_lines": 85,
+    "invalid_vulnerabilities": []
+  }
+}

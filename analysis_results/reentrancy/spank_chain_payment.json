@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 426,
+      "category": "reentrancy",
+      "reason": "The transfer of ETH to `Channels[_lcID].partyAddresses[0]` in `LCOpenTimeout()` can be reentered by the recipient. Since the contract does not update the state of the channel before the transfer, a malicious recipient can reenter the function and withdraw ETH multiple times."
+    },
+    {
+      "line": 430,
+      "category": "reentrancy",
+      "reason": "The transfer of tokens to `Channels[_lcID].partyAddresses[0]` in `LCOpenTimeout()` can be reentered by the recipient. Since the contract does not update the state of the channel before the transfer, a malicious recipient can reenter the function and withdraw tokens multiple times."
+    }
+  ],
+  "validation": {
+    "total_lines": 896,
+    "invalid_vulnerabilities": []
+  }
+}

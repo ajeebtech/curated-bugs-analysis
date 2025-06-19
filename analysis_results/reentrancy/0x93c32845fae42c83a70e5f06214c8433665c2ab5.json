@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 29,
+      "category": "reentrancy",
+      "reason": "The contract allows withdrawal of funds using a low-level call, which can lead to a reentrancy attack if the recipient is a malicious contract. The Collect function does not follow the checks-effects-interactions pattern, as it makes an external call *before* updating the balance."
+    }
+  ],
+  "validation": {
+    "total_lines": 85,
+    "invalid_vulnerabilities": []
+  }
+}

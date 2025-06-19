@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 40,
+      "category": "reentrancy",
+      "reason": "The call to `msg.sender.call.value(_am)()` allows the recipient to execute arbitrary code, potentially calling back into the `CashOut` function before the balance is updated. This can lead to the re-entrant vulnerability, where the same funds can be withdrawn multiple times."
+    }
+  ],
+  "validation": {
+    "total_lines": 76,
+    "invalid_vulnerabilities": []
+  }
+}

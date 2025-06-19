@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 18,
+      "category": "denial_of_service",
+      "reason": "The `insertNnumbers` function can cause a denial-of-service by consuming excessive gas if `numbers` is too large, potentially exceeding the block gas limit and making the function unusable."
+    },
+    {
+      "line": 31,
+      "category": "denial_of_service",
+      "reason": "The `clearDOS` function can cause a denial-of-service by consuming excessive gas if `numElements` is very large, exceeding the block gas limit when creating a new array with size 0. While it's creating an empty array, the prior requirement of `numElements > 1500` implies a large initial array, meaning a significant amount of gas was already used to populate it and could cause the clear function to run out of gas."
+    }
+  ],
+  "validation": {
+    "total_lines": 47,
+    "invalid_vulnerabilities": []
+  }
+}

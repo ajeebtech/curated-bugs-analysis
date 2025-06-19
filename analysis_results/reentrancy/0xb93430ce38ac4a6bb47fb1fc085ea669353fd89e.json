@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "vulnerabilities": [
+    {
+      "line": 38,
+      "category": "reentrancy",
+      "reason": "The CashOut function allows a user to withdraw funds. The `msg.sender.call.value(_am)()` on line 38 is vulnerable to reentrancy. An attacker can create a fallback function that calls CashOut again before the balances[msg.sender]-=_am; updates the balance, allowing them to withdraw more funds than they should be able to."
+    }
+  ],
+  "validation": {
+    "total_lines": 74,
+    "invalid_vulnerabilities": []
+  }
+}
